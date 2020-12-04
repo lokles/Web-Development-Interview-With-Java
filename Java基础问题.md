@@ -317,7 +317,7 @@ volatile两个作用：保持线程可见性；**禁止指令重排序**。
 
 **创建一个对象的过程中一旦出现了指令重排，可能就会获得半初始化的对象，**即还没来得及赋值就先建立了引用关系。要避免这种情况的发生就要使用volatile关键字修饰实列变量。
 
-![1595146749088](https://github.com/lokles/Web-Development-Interview-With-Java/blob/main/images/1595146749088.png)
+![](https://github.com/lokles/Web-Development-Interview-With-Java/blob/main/images/1595146749088.png)
 
 
 
@@ -325,7 +325,7 @@ volatile两个作用：保持线程可见性；**禁止指令重排序**。
 
 
 
-![1595147242606](C:\Users\lok666\AppData\Roaming\Typora\typora-user-images\1595147242606.png)
+![](https://github.com/lokles/Web-Development-Interview-With-Java/blob/main/images/1595147242606.png)
 
 `mark word` 与 `class pointer` 组成**对象头**。 `class pointer`指向对象的类。`padding`作用是将对象在内存中占用的字节数补齐到被8整除。（64位OS下）
 
@@ -349,7 +349,7 @@ volatile两个作用：保持线程可见性；**禁止指令重排序**。
 
 ## 14、对象如何定位？（美团）
 
-![1595149214138](C:\Users\lok666\AppData\Roaming\Typora\typora-user-images\1595149214138.png)
+![](https://github.com/lokles/Web-Development-Interview-With-Java/blob/main/images/1595149214138.png)
 
 hotspot使用的是**直接指针**方式。
 
@@ -363,7 +363,7 @@ hotspot使用的是**直接指针**方式。
 
    具体过程如下图所示：
 
-![1595150434871](C:\Users\lok666\AppData\Roaming\Typora\typora-user-images\1595150434871.png)
+![](https://github.com/lokles/Web-Development-Interview-With-Java/blob/main/images/1595150434871.png)
 
 ## 16、一个Object占多少字节？（shopee）
 
@@ -380,7 +380,7 @@ Object o = new Object();
 
 
 
-![1595152948319](C:\Users\lok666\AppData\Roaming\Typora\typora-user-images\1595152948319.png)
+![](https://github.com/lokles/Web-Development-Interview-With-Java/blob/main/images/1595152948319.png)
 
 **线程与进程区别？**
 
