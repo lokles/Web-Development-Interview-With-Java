@@ -15,7 +15,7 @@
 
 核心原理就是**通过一系列的封装和处理**，将以Java注解的方式定义的远程调用API接口，最终转化为HTTP的请求与响应结果。     
 
-![](C:\Users\lok666\Desktop\feigen远程调用原理图.png)
+![](https://github.com/lokles/Web-Development-Interview-With-Java/blob/main/images/feigen远程调用原理图.png)
 
 从上图可以看到，Feign通过**处理注解**，**将请求模板化**，当实际调用的时候，传入参数，根据参数再应用到请求上，进而转化成真正的 Request 请求。
 
