@@ -317,7 +317,7 @@ volatile两个作用：保持线程可见性；**禁止指令重排序**。
 
 **创建一个对象的过程中一旦出现了指令重排，可能就会获得半初始化的对象，**即还没来得及赋值就先建立了引用关系。要避免这种情况的发生就要使用volatile关键字修饰实列变量。
 
-![1595146749088](C:\Users\lok666\AppData\Roaming\Typora\typora-user-images\1595146749088.png)
+![](https://github.com/lokles/Web-Development-Interview-With-Java/blob/main/images/1595146749088.png)
 
 
 
