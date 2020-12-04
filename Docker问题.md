@@ -14,7 +14,7 @@ Docker是一个容器化平台，它以容器的形式将您的应用程序及�
 
 Docker分客户端和服务端概念，Docker服务端有一个**守护线程**以及多个工作线程概念（类似于nginx）。Docker客户端与Docker守护进程通信，**Docker守护进程负责构建，运行和分发Docker容器。**工作线程负责从仓库拉取镜像。
 
-![image-20200820005743507](C:\Users\lenovo\AppData\Roaming\Typora\typora-user-images\image-20200820005743507.png)
+![](https://github.com/lokles/Web-Development-Interview-With-Java/blob/main/images/docker.png)
 
 ## 4、docker镜像是什么？（美团）（百度）
 
