@@ -242,7 +242,7 @@ redis数据模型：
 
 在Redis中，会给每一个key-value键值对分配一个字典实体，就是`dicEntry`。`dicEntry`包含三部分： **key的指针、val的指针、next指针**，next指针指向下一个dicteEntry形成链表，这个next指针可以将多个哈希值相同的键值对链接在一起，**通过链地址法来解决哈希冲突的问题**
 
-![](https://github.com/lokles/Web-Development-Interview-With-Java/blob/main/redis数据模型.png)
+![](https://github.com/lokles/Web-Development-Interview-With-Java/blob/main/images/redis数据模型.png)
 
 - **sds** ：**Simple Dynamic String**，简单动态字符串，存储字符串数据。
 
