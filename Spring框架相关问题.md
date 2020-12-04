@@ -149,7 +149,7 @@ AOP意为面向切面编程，与OOP一样，是一种编程理念，如果把OO
 
 举一个例子：
 
-![](C:\Users\lok666\Desktop\AOP举例.png)
+![](https://github.com/lokles/Web-Development-Interview-With-Java/blob/main/images/AOP举例.png)
 
 ```Java
 @Component("landlord")
