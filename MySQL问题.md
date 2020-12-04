@@ -87,7 +87,7 @@ Mybatis中使用#{ }代替数据部分防止SQL注入。
 - 更新主键的代价很高，因为将会导致被更新的行移动。因此，对于`InnoDB`表，我们一般定义主键为不可更新。
 - 二级索引访问需要两次索引查找，第一次找到主键值，第二次根据主键值找到行数据。这种二次查询的方式叫做**回表查询**。
 
-![](C:\Users\lok666\Desktop\聚簇索引.png)
+![](https://github.com/lokles/Web-Development-Interview-With-Java/blob/main/images/聚簇索引.png)
 
 
 
@@ -120,7 +120,7 @@ Mybatis中使用#{ }代替数据部分防止SQL注入。
 
 如图，index(年龄, 姓氏,名字)，叶节点上data域存储的是三个关键字的数据。且是按照年龄、姓氏、名字的顺序排列的。
 
-![](C:\Users\lok666\Desktop\联合索引.png)
+![](https://github.com/lokles/Web-Development-Interview-With-Java/blob/main/images/联合索引.png)
 
 如果跳过年纪按照后面两个字段搜索，会导致全表扫描。
 
