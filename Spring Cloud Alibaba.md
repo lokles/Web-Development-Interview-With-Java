@@ -110,7 +110,7 @@ cancel阶段：**Cancel** 是对**Try**操作的一个回撤。当TCC事务管�
 
 **3. MQ事务：**
 
-![](C:\Users\lok666\Desktop\MQ事务.jpg)
+![](https://github.com/lokles/Web-Development-Interview-With-Java/blob/main/images/MQ事务.jpg)
 
 1. 在系统A处理任务A前，首先向消息中间件发送一条消息
 2. 消息中间件收到后将该条消息持久化，但并不投递。此时下游系统B仍然不知道该条消息的存在。
