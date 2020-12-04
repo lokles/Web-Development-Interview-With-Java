@@ -1,6 +1,6 @@
 # Spring问题
 
-## 1、http请求过来springMVC是怎么处理的？
+## 1、http请求过来springMVC是怎么处理的？（百度）
 
 1. 请求被Spring 前端控制器 `DispatcherServlet` 捕获
 2. `DispatcherServlet`对请求URL进行解析（核心方法`doDispatch()`），得到请求资源标识符（URI）然后根据该URI，调用`HandlerMapping`获得该`Handler（Controller)`配置的所有相关的对象
@@ -12,7 +12,7 @@
 8. `ViewResolver` 结合Model和View，来渲染视图
 9. 由`DispatcherServlet` 响应给客户端
 
-## 2、视图解析器怎么解析的？
+## 2、视图解析器怎么解析的？（字节）
 
 1. 任何方法的返回值最终都会封装为`ModelAndView`对象。
 2. `viewResolver`的**唯一作用**是根据`ModelAndView`得到`view`对象，视图对象才能真正的转发或者重定向到页面（并将模型中的数据暴露到请求域中）。
@@ -25,7 +25,7 @@ Annotation其实是一种接口。通过java的反射机制相关的API来访问
 
 
 
-## 4、spring循环依赖？
+## 4、spring循环依赖？（阿里）（美团）
 
 多个bean之间的互相引用，导致一个闭环的出现。
 
@@ -41,7 +41,7 @@ singletonObjects：//单例对象的cache
 
 假设现在有两个bean X Y互相依赖，且都是单例的，X开始生命周期后直到X通过构造器以及创建对象后，会有一个暴露阶段，此时会将X的一个`ObiectFcatory`对象暴露出去并存入二级缓存中。然后会进行X的属性注入，这是会将Y注入，但是还没有Y，然后进入到Y bean的生命周期。一直到Y暴露出自己的`ObjectFcatory`对象暴露出去并存入二级缓存中后，Y进行依赖注入，需要注入X，然后二级缓存中有X的一个对应的工厂对象。至此完成了循环依赖。需要注意的是此过程仅适用于由于属性注入引起的循环依赖，对于由于构造器注入引起的循环依赖不能解决，原因是`ObiectFcatory`对象是在根据构造器通过反射创建对象后才产生的。对于构造器注入引起的循环依赖无法起作用。
 
-## 5、spring bean 生命周期？
+## 5、spring bean 生命周期？（阿里）（大华）
 
 #### 1、实例化过程
 
@@ -67,7 +67,7 @@ singletonObjects：//单例对象的cache
 
 `destory-metnod`方法进行bean的销毁。
 
-## 6、spring容器启动流程？
+## 6、spring容器启动流程？（阿里）
 
 1. 将配置文件加载为`BeanDefinition`并注册到容器中；这一步需要`XmlBeanDefinitionReader`的配合。
 2. 注册`BeanFactoryPostProcesser`，包含一个可以传入`beanFactory`引用的方法，获取到容器之后可以做很多事情。由于`BeanFactoryPostProcesser`工作在bean实例化之前，所以可以通过`beanFactory`获取到map从而手动修改或者移除`beanDefinition`
@@ -86,7 +86,7 @@ public interface BeanPostProcessor {
 
 5. `beanDefinition`实例化
 
-## 7、BeanFactory和ApplicationContext有什么区别？
+## 7、BeanFactory和ApplicationContext有什么区别？（滴滴）
 
 `BeanFactory：`是Spring里面最底层的接口，提供了最简单的容器的功能，包含了各种Bean的定义，读取bean配置文件，管理bean的加载、实例化、控制bean的生命周期、维护bean之间的依赖关系等等。
 
@@ -106,7 +106,7 @@ public interface BeanPostProcessor {
 
 set方法注入：要求被注入的属性必须有set方法。
 
-## 10、spring的自动装配？
+## 10、spring的自动装配？（字节）
 
 **Spring自动将某个bean的引用装配给了指定属性，这一过程叫做自动装配。**Spring提供了三种自动装配的策略。
 
@@ -132,7 +132,7 @@ set方法注入：要求被注入的属性必须有set方法。
 
 `@SpringBootApplication`启动类注解，等同于`@SpringBootConfiguration、 @EnableAutoConfiguration、 @ComponentScan` 这三个注解
 
-## 12、Spring AOP是什么？
+## 12、Spring AOP是什么？（美团）
 
 AOP意为面向切面编程，与OOP一样，是一种编程理念，如果把OOP看作是自上而下的层层抽象，那么AOP就是从左至右的相同功能模块的抽取和封装。开发中使用AOP可以大大减少冗余代码，降低模块之间的耦合度，并且有利于未来的扩展性。比如商城业务中好多的微服务模块都要先进行用户验证。我们就可以把验证用户这一功能抽取出来作为一个切面。
 
@@ -182,21 +182,19 @@ class Broker {
 }
 ```
 
-
-
 ## 13、AspectJ是什么？与Spring AOP的区别？
 
 AspectJ是AOP的一种实现，是目前Java开发社区中最流行的AOP框架，拥有更好的性能。
 
-## 14、SpringMVC如何将纯文本的Http协议的请求转化为Java对象的？
+## 14、SpringMVC如何将纯文本的Http协议的请求转化为Java对象的？（字节）
 
 利用`HttpMessageConverter`的实现类将http的请求转化为Java对象的。同时，响应的时候还可以利用`HttpMessageConverter`的实现类将Java对象转化为http响应的格式。
 
-## 15、讲下SpringMVC的核心入口类是什么？
+## 15、讲下SpringMVC的核心入口类是什么？（美团）
 
 `DispatcherServlet`是`SpringMVC`的核心入口。
 
-## 16、Spring 中的单例 Beans 是线程安全的么？
+## 16、Spring 中的单例 Beans 是线程安全的么？（美团）
 
 不是线程安全的，对于单例Bean，所有线程都共享一个单例实例Bean，因此是存在资源的竞争。
 
