@@ -12,6 +12,18 @@
 
 ```Java
 
+        String a1 = "";
+        String b1 = "";
+        here:
+        for (int i = 1; i <= 4; i++) {
+            a1 = "外层循环第"+i+"层";
+            for (int j = 1; j <= 4; j++) {
+                b1 = "内层循环第"+j+"层";
+                if (2 == j & 2 == i) {
+                    break here;
+                }
+            }
+        }
 ```
 
 
