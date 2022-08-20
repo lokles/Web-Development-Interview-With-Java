@@ -315,6 +315,6 @@ binlog: MySQL server提供的功能，逻辑日志，击记录的是sql语句的
 2. 执行器拿到引擎给的数据进行更新，引擎将这条修改后的数据更新入内存，同时更新操作记录到redo log中，此时redo log处于prepare状态，告知执行器处理完成随时可以提交事务
 3. 执行器生成该操作的binlog并写入磁盘
 4. 执行器调用引擎的提交事务接口，引擎将redo log状态由prepare修改为commit，更新完成。
-redo log的两阶段提交是为了保证redo log 与binlog之间的逻辑一致。
+redo log的两阶段提交是为了保证redo log 与binlog之间的逻辑一致。这样来即便发生MySQL的crash也会保证两个日志的数据一致性。
 
 
